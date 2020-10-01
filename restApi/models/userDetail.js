@@ -13,6 +13,8 @@ const customer = new mongoose.Schema({
   emailAdress: {
     type: String,
     required: true,
+    match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+        //validation for emailId format
   },
   city: {
     type: String,
